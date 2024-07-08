@@ -1,7 +1,8 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-glass">
-        <div class="container-fluid">
-            <div class="d-flex justify-content-between align-items-center w-100">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-glass">
+        <div class="container">
+            <div class="d-flex justify-content-end align-items-center w-100">
                 <div class="d-flex align-items-center">
                     <a class="text-inherit d-block d-xl-none me-4" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-text-indent-right" viewBox="0 0 16 16">
@@ -146,6 +147,7 @@
             </div>
         </div>
     </nav>
+    </div>
 </template>
 
 	

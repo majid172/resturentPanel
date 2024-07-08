@@ -1,9 +1,13 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Home from '../components/Home.vue'
+import NavBar from '../components/NavBar.vue'
+import SideBar from '../components/SideBar.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <NavBar></NavBar>
+    <div class="main-wrapper">
+      <SideBar></SideBar>
+      <Home></Home>
+    </div>
 </template>
