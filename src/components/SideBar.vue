@@ -8,7 +8,7 @@
             <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
                 <ul class="navbar-nav flex-column" id="sideNavbar">
                     <li class="nav-item">
-                        <router-link to="/" class="nav-link  active ">
+                        <router-link to="/" class="nav-link" exact-active-class="active">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><i class="bi bi-house"></i></span>
                                 <span class="nav-link-text">Dashboard</span>
@@ -17,13 +17,13 @@
                        
                     </li>
                     <li class="nav-item mt-6 mb-3">
-                        <span class="nav-label">Store Managements</span>
+                        <span class="nav-label">Resturant Managements</span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="products.html">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
-                                <span class="nav-link-text">Products</span>
+                                <span class="nav-link-text">Menu Managements</span>
                             </div>
                         </a>
                     </li>
@@ -31,7 +31,7 @@
                         <a class="nav-link " href="categories.html">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
-                                <span class="nav-link-text">Categories</span>
+                                <span class="nav-link-text">Reservations</span>
                             </div>
                         </a>
                     </li>
@@ -62,27 +62,25 @@
                         </div>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link " href="vendor-grid.html">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-shop"></i></span>
-                                <span class="nav-link-text">Sellers / Vendors</span>
-                            </div>
-                        </a>
+                   <li class="nav-item mt-6 mb-3">
+                        <span class="nav-label">User Managements</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="customers.html">
+                        <router-link to="/customer" class="nav-link " exact-active-class="active">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><i class="bi bi-people"></i></span>
                                 <span class="nav-link-text">Customers</span>
                             </div>
-                        </a>
+                        </router-link>
+                        <!-- <a class="nav-link " href="customers.html"> -->
+                            
+                        <!-- </a> -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="reviews.html">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><i class="bi bi-star"></i></span>
-                                <span class="nav-link-text">Reviews</span>
+                                <span class="nav-link-text">Report</span>
                             </div>
                         </a>
                     </li>
@@ -206,42 +204,9 @@
                             </div>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-question-circle"></i></span>
-                                <span class="nav-link-text">Help Center</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#!">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-infinity"></i></span>
-                                <span class="nav-link-text">How FreshCart Works</span>
-                            </div>
-                        </a>
-                    </li>
+                    
+                
 
-                    <li class="nav-item mt-6 mb-3">
-                        <span class="nav-label">Our Apps</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#!">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-apple"></i></span>
-                                <span class="nav-link-text">Apple Store</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#!">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-google-play"></i></span>
-                                <span class="nav-link-text">Google Play Store</span>
-                            </div>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
