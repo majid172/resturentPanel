@@ -31,6 +31,23 @@
                     </router-link>
                 </li>
                 
+                <li class="sidebar__menu-header">User Management</li>
+                <li class="sidebar-menu-item">
+                    <router-link :to="{name:'customer'}" class="nav-link"
+                       data-default-url="/customer">
+                        <i class="menu-icon las la-users text-danger"></i>
+                        <span class="menu-title">All Users</span>
+                    </router-link>
+                </li>
+                
+                <li class="sidebar__menu-header">Settings Panel</li>
+                <li class="sidebar-menu-item">
+                    <router-link :to="{name:'control_panel'}" class="nav-link"
+                       data-default-url="/control-panel">
+                        <i class="menu-icon las la-cog text-warning"></i>
+                        <span class="menu-title">Control Panel</span>
+                    </router-link>
+                </li>
                 
 
         </ul>
