@@ -84,24 +84,24 @@ onMounted(()=>{
                         </thead>
                         <tbody>
                            
-                        <tr v-for="user in customerStore.fetchUsers":key="user.id">
+                        <tr v-for="user in customerStore.users":key="user.id">
                             <td data-label="SL">
-                                {{ user.id }}
+                            {{ user.id }}
                             </td>
                             <td data-label="Name')">
                                 <a href="" target="_blank">
                                     <div class=" d-block align-items-center ">
                                         <div class="rounded-circle mr-2 w-40px" data-original-title="">
-                                    
+                                            {{ user.firstName }} {{ user.lastName }}
                                             <br>
-                                            <span class="text-muted font-14"></span>
+                                            <span class="text-muted font-14">{{ user.maidenName }}</span>
                                         </div> 
                                     </div>
                                 </a>
                             </td>
-                            <td data-label="Email')"></td>
+                            <td data-label="Email">{{ user.email }}</td>
                             
-                            <td data-label="Balance')">
+                            <td data-label="Balance">
                                
                             </td>
                             <td>
@@ -115,7 +115,7 @@ onMounted(()=>{
                                 
                                 <div class="dropdown">
                                     <a class="btn btn--primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                      More Action'
+                                      More Action
                                     </a>
                                   
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">

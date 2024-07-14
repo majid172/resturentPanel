@@ -20,14 +20,14 @@
                     <router-link to="/" class="nav-link"
                        data-default-url="/">
                         <i class="menu-icon las la-list text-success"></i>
-                        <span class="menu-title">Order</span>
+                        <span class="menu-title">New Order</span>
                     </router-link>
                 </li>
                 <li class="sidebar-menu-item">
                     <router-link to="/" class="nav-link"
                        data-default-url="/">
                         <i class="menu-icon las la-list text-success"></i>
-                        <span class="menu-title">Order</span>
+                        <span class="menu-title">Ongoing Order</span>
                     </router-link>
                 </li>
                 
