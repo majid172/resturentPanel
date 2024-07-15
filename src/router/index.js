@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CustomerView from '@/views/CustomerView.vue'
 import ControlPanelView from '@/views/ControlPanelView.vue'
+import BasicSettingsView from '@/views/settings/BasicSettingsView.vue';
+import LogoView from '@/views/settings/LogoView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,7 +22,18 @@ const router = createRouter({
       path: '/control-panel',
       name: 'control_panel',
       component:ControlPanelView
+    },
+    {
+      path:'/basic-settings',
+      name:'basicSettings',
+      component: BasicSettingsView
+    },
+    {
+      path:'/logo',
+      name:'logo',
+      component: LogoView
     }
+    
   ]
 })
 

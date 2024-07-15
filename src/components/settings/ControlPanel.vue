@@ -13,7 +13,8 @@
                                 <div class="col-lg-9 justify-content-center p-3">
                                     <h5>Basic</h5>
                                     <p class="text-secondary">Basic such as, site title, timezone, currency, notifications, verifications and so on.</p>
-                                    <a href="">Update Settings</a>
+                                    <router-link to="/basic-settings">Update Settings</router-link>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -56,7 +57,8 @@
                                 <div class="col-lg-9 justify-content-center p-3">
                                     <h5>Logo & Favicon</h5>
                                     <p class="text-secondary">Settings for logos, including admin, footer, and favicon logos as well as breadcrumb.</p>
-                                    <a href="">Update Settings</a>
+                                    <router-link to="/logo">Update Settings</router-link>
+                                    
                                 </div>
                             </div>
                         </div>

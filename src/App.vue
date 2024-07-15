@@ -9,7 +9,8 @@ import SideBar from './components/SideBar.vue'
   <div class="top-nav-bg">
   <NavBar></NavBar>
     <div class="breadcrumb-wrapper">
-      @include('admin.components.breadcrumb')
+    PageTItle
+      <!-- @include('admin.components.breadcrumb') -->
     </div>
   </div>
   <div class="body-wrapper">

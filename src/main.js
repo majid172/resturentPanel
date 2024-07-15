@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import './assets/sass/style.scss'
+import '@/assets/js/jquery-3.6.0.min.js'
+import '@/assets/js/dropdown.js'
 
 
 import './assets/js/charts.min.js'

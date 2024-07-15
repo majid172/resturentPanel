@@ -1,3 +1,6 @@
+<script setup>
+import '@/assets/js/dropdown.js'
+</script>
 <template>
 <div class="sidebar">
     <button class="res-sidebar-close-btn"><i class="las la-times"></i></button>
@@ -30,6 +33,16 @@
                         <span class="menu-title">Ongoing Order</span>
                     </router-link>
                 </li>
+                
+                <li class="sidebar__menu-header">Attendence Details</li>
+                <li class="sidebar-menu-item">
+                    <router-link to="/" class="nav-link"
+                       data-default-url="/">
+                        <i class="menu-icon las la-list text-success"></i>
+                        <span class="menu-title">Daily Attendence</span>
+                    </router-link>
+                </li>
+    
                 
                 <li class="sidebar__menu-header">User Management</li>
                 <li class="sidebar-menu-item">
