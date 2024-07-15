@@ -18,6 +18,22 @@ import '@/assets/js/dropdown.js'
                         <span class="menu-title">Dashboard</span></router-link>
                     
                 </li>
+                <li class="sidebar__menu-header">Menu Details</li>
+                <li class="sidebar-menu-item">
+                    <router-link to="/menu-list" class="nav-link"
+                       data-default-url="/menu-list">
+                        <i class="menu-icon las la-list-alt text-success"></i>
+                        <span class="menu-title">Menu List</span>
+                    </router-link>
+                </li>
+                <li class="sidebar-menu-item">
+                    <router-link to="/add-menu" class="nav-link"
+                       data-default-url="/add-menu">
+                        <i class="menu-icon las la-plus-circle text-success"></i>
+                        <span class="menu-title">Add Menu</span>
+                    </router-link>
+                </li>
+                
                 <li class="sidebar__menu-header">Order Details</li>
                 <li class="sidebar-menu-item">
                     <router-link to="/" class="nav-link"

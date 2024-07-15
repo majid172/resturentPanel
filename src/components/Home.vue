@@ -8,11 +8,11 @@
                           <a href="">
                           <div class="row">
                               <div class="col-lg-3 mx-auto bg--primary d-flex align-items-center justify-content-center">
-                                  <i class="fas fa-coins" style="font-size: 2rem;"></i>
+                                  <i class="las la-utensils" style="font-size: 2rem;"></i>
                               </div>
                               <div class="col-lg-9 justify-content-center p-3">
-                                  <h6 class="m-b-5">Funded Amount</h6>
-                                  <h3 class="m-b-0"></h3>
+                                  <h6 class="m-b-5">Total Order</h6>
+                                  <h3 class="m-b-0">15</h3>
         
                               </div>
                           </div>
@@ -24,11 +24,11 @@
                           <a href="">
                           <div class="row">
                               <div class="col-lg-3 mx-auto bg--primary d-flex align-items-center justify-content-center">
-                                  <i class="las la-percent" style="font-size: 2rem;"></i>
+                                  <i class="las la-user-friends" style="font-size: 2rem;"></i>
                               </div>
                               <div class="col-lg-9 justify-content-center p-3">
-                                  <h6 class="m-b-5">Funded Charge</h6>
-                                  <h3 class="m-b-0 "></h3>
+                                  <h6 class="m-b-5">Customer Today</h6>
+                                  <h3 class="m-b-0 ">20</h3>
         
                               </div>
                           </div>
@@ -40,10 +40,10 @@
                           <a href="">
                           <div class="row">
                               <div class="col-lg-3 mx-auto bg--primary d-flex align-items-center justify-content-center">
-                                  <i class="lar la-credit-card" style="font-size: 2rem;"></i>
+                                  <i class="las la-hamburger" style="font-size: 2rem;"></i>
                               </div>
                               <div class="col-lg-9 justify-content-center p-3">
-                                  <h6 class="m-b-5 ">Total Payout</h6>
+                                  <h6 class="m-b-5 ">Total Menu</h6>
                                   <h3 class="m-b-0">12</h3>
         
                               </div>
@@ -56,10 +56,10 @@
                           <a href="">
                           <div class="row">
                               <div class="col-lg-3 mx-auto bg--primary d-flex align-items-center justify-content-center">
-                                  <i class="las la-percent" style="font-size: 2rem;"></i>
+                                  <i class="las la-money-bill-wave" style="font-size: 2rem;"></i>
                               </div>
                               <div class="col-lg-9 justify-content-center p-3">
-                                  <h6 class="m-b-5">Payout Charge</h6>
+                                  <h6 class="m-b-5">Today Revenue</h6>
                                   <h3 class="m-b-0">4</h3>
         
                               </div>
@@ -80,9 +80,9 @@
                                           <i class="dashboard-card-icon las la-users"></i>
                                       </div>
                                       <div class="dashboard-widget__content">
-                                          <a title="View all')" class="dashboard-widget-link"
-                                              href=""></a>
-                                          <h5>44</h5>
+                                      <router-link to="/customer" class="dashboard-widget-link" title="View All"></router-link>
+                                         
+                                          <h5>50</h5>
                                           <span>Total Users</span>
                                       </div>
                                   </div>
@@ -93,9 +93,10 @@
                                           <i class="dashboard-card-icon las la-user-check"></i>
                                       </div>
                                       <div class="dashboard-widget__content">
-                                          <a title="View all" class="dashboard-widget-link"
-                                              href=""></a>
-                                          <h5></h5>
+                                      <router-link to="/customer" class="dashboard-widget-link" title="View All"></router-link>
+                                         
+                                          <h5>50</h5>
+                                          
                                           <span>Active Users</span>
                                       </div>
                                   </div>
@@ -106,9 +107,9 @@
                                           <i class="dashboard-card-icon las la-envelope"></i>
                                       </div>
                                       <div class="dashboard-widget__content">
-                                          <a title="View all" class="dashboard-widget-link"
-                                              href=""></a>
-                                          <h5>Email_unverified_users</h5>
+                                      <router-link to="/customer" class="dashboard-widget-link" title="View All"></router-link>
+                                         
+                                          <h5>50</h5>
                                           <span>Email Unverified</span>
                                       </div>
         
@@ -119,10 +120,10 @@
                                       <div class="dashboard-widget__icon">
                                           <i class="dashboard-card-icon las la-credit-card"></i>
                                       </div>
-                                      <div class="dashboard-widget__content">
-                                          <a title="View all" class="dashboard-widget-link"
-                                              href=""></a>
-                                          <h5></h5>
+                                     <div class="dashboard-widget__content">
+                                      <router-link to="/customer" class="dashboard-widget-link" title="View All"></router-link>
+                                         
+                                          <h5>50</h5>
                                           <span>Pending Payouts</span>
                                       </div>
                                   </div>
@@ -133,9 +134,9 @@
                                           <i class="dashboard-card-icon las la-spinner"></i>
                                       </div>
                                       <div class="dashboard-widget__content">
-                                          <a title="View all" class="dashboard-widget-link"
-                                              href=""></a>
-                                          <h5></h5>
+                                      <router-link to="/customer" class="dashboard-widget-link" title="View All"></router-link>
+                                         
+                                          <h5>50</h5>
                                           <span>Pending Funds</span>
                                       </div>
                                   </div>
@@ -146,10 +147,9 @@
                                           <i class="dashboard-card-icon las la-ban"></i>
                                       </div>
                                       <div class="dashboard-widget__content">
-                                          <a title="View all" class="dashboard-widget-link"
-                                              href="">
-                                          </a>
-                                          <h5></h5>
+                                      <router-link to="/customer" class="dashboard-widget-link" title="View All"></router-link>
+                                         
+                                          <h5>50</h5>
                                           <span>Rejected Funds</span>
                                       </div>
                                   </div>

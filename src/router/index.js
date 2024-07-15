@@ -4,7 +4,9 @@ import CustomerView from '@/views/CustomerView.vue'
 import ControlPanelView from '@/views/ControlPanelView.vue'
 import BasicSettingsView from '@/views/settings/BasicSettingsView.vue';
 import LogoView from '@/views/settings/LogoView.vue'
-
+import MenuListView from '@/views/menu/ListView.vue';
+import AddMenuView from '@/views/menu/AddMenuView.vue';
+import ApexCharts from 'apexcharts';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -32,6 +34,16 @@ const router = createRouter({
       path:'/logo',
       name:'logo',
       component: LogoView
+    },
+    {
+      path:'/menu-list',
+      name: 'menuList',
+      component: MenuListView
+    },
+    {
+      path:'/add-menu',
+      name: 'addMenu',
+      component: AddMenuView
     }
     
   ]
