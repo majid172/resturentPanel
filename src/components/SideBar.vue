@@ -54,8 +54,15 @@ import '@/assets/js/dropdown.js'
                 <li class="sidebar-menu-item">
                     <router-link to="/" class="nav-link"
                        data-default-url="/">
-                        <i class="menu-icon las la-list text-success"></i>
+                        <i class="menu-icon las la-calendar text-success"></i>
                         <span class="menu-title">Daily Attendence</span>
+                    </router-link>
+                </li>
+                <li class="sidebar-menu-item">
+                    <router-link to="/" class="nav-link"
+                       data-default-url="/">
+                        <i class="menu-icon las la-calendar-check  text-success"></i>
+                        <span class="menu-title">Monthly Attendence</span>
                     </router-link>
                 </li>
     

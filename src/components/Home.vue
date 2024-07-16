@@ -77,7 +77,7 @@ const donutChartOptions = ref({
 
 <template>
    <div class="bodywrapper__inner">
-      <div class="row gy-4">
+        <div class="row gy-4">
           <div class="col-xl-12">
               <div class="row gy-2">
                   <div class="col-lg-3">
@@ -258,6 +258,65 @@ const donutChartOptions = ref({
               </div>
           </div>
 
+            <div class="col-xl-6">
+              <div class="card">
+              <div class="card-header">
+                Recently Order List
+              </div>
+                  <div class="card-body ">
+                      <div class="table-responsive">
+                      <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Item</th>
+      <th scope="col">Category</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td ><span class="badge bg-warning">Pending</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td ><span class="badge bg-warning">Pending</span></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="">Larry the Bird</td>
+      <td>@twitter</td>
+    
+      <td>@twitter</td>
+      <td ><span class="badge bg-warning">Pending</span></td>
+    </tr>
+  </tbody>
+</table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-6">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Popular Food Category</h5>
+                      <div id="os-chart">
+                      <apexchart type="donut" width="380" :options="donutChartOptions" :series="donutSeries"></apexchart>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
   </div>
 </template>
