@@ -1,51 +1,78 @@
-<script >
-import { defineComponent } from 'vue';
-export default defineComponent({
-  name: 'HomeView',
-  data() {
-    return {
-      series: [
-        {
-          name: 'Series 1',
-          data: [31, 40, 28, 51, 42, 109, 100]
-        },
-        {
-          name: 'Series 2',
-          data: [11, 32, 45, 32, 34, 52, 41]
-        }
-      ],
-      chartOptions: {
-        chart: {
-          height: 350,
-          type: 'area'
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          curve: 'smooth'
-        },
-        xaxis: {
-          type: 'datetime',
-          categories: [
-            '2018-09-19T00:00:00.000Z',
-            '2018-09-19T01:30:00.000Z',
-            '2018-09-19T02:30:00.000Z',
-            '2018-09-19T03:30:00.000Z',
-            '2018-09-19T04:30:00.000Z',
-            '2018-09-19T05:30:00.000Z',
-            '2018-09-19T06:30:00.000Z'
-          ]
-        },
-        tooltip: {
-          x: {
-            format: 'dd/MM/yy HH:mm'
-          }
-        }
-      }
-    };
+<script setup>
+import { ref } from 'vue';
+const series = ref([
+    {
+    name: 'Series 1',
+    data: [301, 40, 208, 51, 42, 109, 100]
+    }
+]);
+const chartOptions = ref({
+  chart: {
+    height: 200,
+    type: 'area'
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  xaxis: {
+    type: 'datetime',
+    categories: [
+      '2018-09-19T00:00:00.000Z',
+      '2018-09-19T01:30:00.000Z',
+      '2018-09-19T02:30:00.000Z',
+      '2018-09-19T03:30:00.000Z',
+      '2018-09-19T04:30:00.000Z',
+      '2018-09-19T05:30:00.000Z',
+      '2018-09-19T06:30:00.000Z'
+    ]
+  },
+  tooltip: {
+    x: {
+      format: 'dd/MM/yy HH:mm'
+    }
   }
 });
+const donutSeries = ref([44, 55, 41, 17, 15]);
+
+const donutChartOptions = ref({
+    chart: {
+        width: 480,
+        type: 'donut'
+    },
+    plotOptions: {
+        pie: {
+            startAngle: -90,
+            endAngle: 270
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    fill: {
+        type: 'gradient'
+    },
+    legend: {
+        formatter: function (val, opts) {
+            return val + " - " + opts.w.globals.series[opts.seriesIndex];
+        }
+    },
+   
+    responsive: [{
+        breakpoint: 480,
+        options: {
+            chart: {
+                width: 200
+            },
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }]
+});
+
 </script>
 
 <template>
@@ -213,7 +240,7 @@ export default defineComponent({
           <div class="col-xl-6">
               <div class="card">
                   <div class="card-body">
-                      <h5 class="card-title">Daily Logins for the Past 10 Days</h5>
+                      <h5 class="card-title">Monthly Income</h5>
                       <div id="login-chart">
                         <apexchart type="area" :options="chartOptions" :series="series"></apexchart>
                       </div>
@@ -223,8 +250,10 @@ export default defineComponent({
           <div class="col-xl-6">
               <div class="card">
                   <div class="card-body">
-                      <h5 class="card-title">Login Browser History</h5>
-                      <div id="os-chart"></div>
+                      <h5 class="card-title">Popular Food Category</h5>
+                      <div id="os-chart">
+                      <apexchart type="donut" width="380" :options="donutChartOptions" :series="donutSeries"></apexchart>
+                      </div>
                   </div>
               </div>
           </div>
