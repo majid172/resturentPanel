@@ -4,6 +4,8 @@ import CustomerView from '@/views/CustomerView.vue'
 import ControlPanelView from '@/views/ControlPanelView.vue'
 import BasicSettingsView from '@/views/settings/BasicSettingsView.vue';
 import LogoView from '@/views/settings/LogoView.vue'
+import CategoryListView from '@/views/category/ListView.vue'
+import AddCategoryView from '@/views/category/AddCategroyView.vue';
 import MenuListView from '@/views/menu/ListView.vue';
 import AddMenuView from '@/views/menu/AddMenuView.vue';
 const router = createRouter({
@@ -33,6 +35,16 @@ const router = createRouter({
       path:'/logo',
       name:'logo',
       component: LogoView
+    },
+    {
+      path:'/category-list',
+      name: 'categoryList',
+      component: CategoryListView
+    },
+    {
+      path:'/add-category',
+      name: 'addCategory',
+      component: AddCategoryView
     },
     {
       path:'/menu-list',

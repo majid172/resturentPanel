@@ -258,7 +258,7 @@ const donutChartOptions = ref({
               </div>
           </div>
 
-            <div class="col-xl-6">
+            <div class="col-xl-12">
               <div class="card">
               <div class="card-header">
                 Recently Order List
@@ -269,8 +269,11 @@ const donutChartOptions = ref({
   <thead>
     <tr>
       
+      <th scope="col">Order No.</th>
       <th scope="col">Item</th>
       <th scope="col">Category</th>
+      <th scope="col">Customer</th>
+      <th scope="col">Date</th>
       <th scope="col">Price</th>
       <th scope="col">Quantity</th>
       <th scope="col">Status</th>
@@ -279,27 +282,61 @@ const donutChartOptions = ref({
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
+      <td scope="row">#22545</td>
+      <td scope="">Chicken</td>
       <td>Mark</td>
       <td>Otto</td>
-      <td>@mdo</td>
+      <td>2024-07-16</td>
+      <td>$52.00</td>
+      <td>2</td>
       <td ><span class="badge bg-warning">Pending</span></td>
-      <td></td>
+
+      <td>
+      <div class="dropdown">
+      <a
+        class="btn btn-outline-success dropdown-toggle"
+        href="javascript:void(0)"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="las la-ellipsis-v"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Processing</a></li>
+        <li><a class="dropdown-item" href="#">Complete</a></li>
+      </ul>
+    </div>
+  </td>
+
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td ><span class="badge bg-warning">Pending</span></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="">Larry the Bird</td>
-      <td>@twitter</td>
-    
-      <td>@twitter</td>
-      <td ><span class="badge bg-warning">Pending</span></td>
+      <td scope="row">#22545</td>
+      <td scope="">Chicken</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>2024-07-16</td>
+      <td>$52.00</td>
+      <td>2</td>
+      <td><span class="badge bg-warning">Pending</span></td>
+
+      <td>
+      <div class="dropdown">
+      <a
+        class="btn btn-outline-success dropdown-toggle"
+        href="javascript:void(0)"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <i class="las la-ellipsis-v"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Processing</a></li>
+        <li><a class="dropdown-item" href="#">Complete</a></li>
+      </ul>
+    </div>
+  </td>
+
     </tr>
   </tbody>
 </table>
@@ -307,16 +344,7 @@ const donutChartOptions = ref({
                   </div>
               </div>
           </div>
-          <div class="col-xl-6">
-              <div class="card">
-                  <div class="card-body">
-                      <h5 class="card-title">Popular Food Category</h5>
-                      <div id="os-chart">
-                      <apexchart type="donut" width="380" :options="donutChartOptions" :series="donutSeries"></apexchart>
-                      </div>
-                  </div>
-              </div>
-          </div>
+          
         </div>
   </div>
 </template>
