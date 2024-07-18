@@ -1,6 +1,6 @@
 <script setup>
-import AddMenu from '@/components/category/AddCategory.vue'
+import AddCategory from '@/components/category/AddCategory.vue'
 </script>
 <template>
-<AddMenu></AddMenu>
+<AddCategory></AddCategory>
 </template>

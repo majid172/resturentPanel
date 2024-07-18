@@ -10,29 +10,21 @@
                         <div class="col-md-6">
                             <div class="row mb-2">
                                 <div class="col-md-3 col-xs-4 d-flex align-items-center">
-                                    <label class="required"> Menu Name</label>
+                                    <label class="required"> Category Name</label>
                                 </div>
                                 <div class="col-md-9 col-xs-12">
                                     <input class="form-control" type="text" name="site_name" required
                                         value="">
                                 </div>
                             </div>
+                           
                             <div class="row mb-2">
                                 <div class="col-md-3 col-xs-4 d-flex align-items-center">
-                                    <label class="required">Category</label>
+                                    <label class="required">Description</label>
                                 </div>
                                 <div class="col-md-9 col-xs-12">
-                                    <input class="form-control" type="text" name="cur_text" required
-                                        value="">
-                                </div>
-                            </div>
-                            <div class="row mb-2">
-                                <div class="col-md-3 col-xs-4 d-flex align-items-center">
-                                    <label class="required">Price</label>
-                                </div>
-                                <div class="col-md-9 col-xs-12">
-                                    <input class="form-control" type="text" name="cur_sym" required
-                                        value="">
+                                    <testarea class="form-control" col="15" row="5" type="text" name="cur_sym" required
+                                        value=""></testarea>
                                 </div>
                             </div>
                         </div>
