@@ -58,10 +58,10 @@ import '@/assets/js/dropdown.js'
                     </router-link>
                 </li>
                 <li class="sidebar-menu-item">
-                    <router-link to="/" class="nav-link"
-                       data-default-url="/">
+                    <router-link to="/order-list" class="nav-link"
+                       data-default-url="/order-list">
                         <i class="menu-icon las la-list text-success"></i>
-                        <span class="menu-title">Ongoing Order</span>
+                        <span class="menu-title">Order List</span>
                     </router-link>
                 </li>
                 

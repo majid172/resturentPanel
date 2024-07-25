@@ -5,6 +5,10 @@ import axios from "axios";
 export const useCategoryStore = defineStore('category',{
     state: ()=>({
         categories:[],
+        addCategoryForm:{
+            category : null,
+            description : null
+        }
     }),
     getters:{},
     actions:{
@@ -13,9 +17,24 @@ export const useCategoryStore = defineStore('category',{
                 const {data} = await axios.get('./src/assets/api/category.json');
                 console.log(data);
                 this.categories = data.categories;
-            }catch(error){
-            console.error('Error fetching category:', error);
+            }catch(error)
+            {
+                console.error('Error fetching category:', error);
             }
         },
+        async addCategory(){
+        console.log(this.addCategoryForm);
+        try{
+        const {data} = await axios.post('./src/assets/api/category',this.addCategoryForm);
+            this.categories.push(data);
+            this.addCategoryForm.category = null;
+            this.addCategoryForm.description = null;
+            console.log(data);
+        }
+        catch(error){
+        console.log(error);
+        }
+            
+        }
     }
 })

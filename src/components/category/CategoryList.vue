@@ -36,7 +36,9 @@ onMounted(()=>{
                             </td>
                             
                             <td data-label="Category">{{ category.category }}</td>
-                            <td data-label="description">{{ category.description.slice(0, 50) }}...</td>
+                            <td data-label="description"
+                            data-bs-toggle="tooltip" data-bs-placement="top" 
+                            :title="category.description">{{ category.description.slice(0, 100) }}...</td>
 
                             <td data-label="Action">
                                 <div class="dropdown">
