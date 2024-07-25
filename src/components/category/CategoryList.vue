@@ -1,3 +1,12 @@
+<script setup>
+import { onMounted } from 'vue';
+import { useCategoryStore } from '@/stores/category';
+
+const categoryStore = useCategoryStore();
+onMounted(()=>{
+    categoryStore.fetchCategory()
+});
+</script>
 <template>
     <div class="row">
     <div class="col-lg-12">
@@ -22,15 +31,14 @@
                         </thead>
                         <tbody>
                            
-                        <tr>
-                            <td data-label="SL">
+                        <tr v-for="(category,index) in categoryStore.categories">
+                            <td data-label="SL">{{ ++index }}
                             </td>
                             
-                            <td data-label="Category"></td>
-                            <td data-label="description"></td>
+                            <td data-label="Category">{{ category.category }}</td>
+                            <td data-label="description">{{ category.description.slice(0, 50) }}...</td>
 
                             <td data-label="Action">
-                                
                                 <div class="dropdown">
                                     <a class="btn btn--primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                       More Action

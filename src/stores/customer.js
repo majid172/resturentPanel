@@ -26,6 +26,7 @@ export const useCustomerStore = defineStore('customer', {
             limit: this.itemsPerPage,
           },
         });
+        console.log(data);
         this.users = data.users;
         this.totalPages = Math.ceil(data.total / this.itemsPerPage);
         this.currentPage = page;
