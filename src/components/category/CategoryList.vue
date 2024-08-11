@@ -25,7 +25,7 @@ onMounted(()=>{
                         <tr>
                             <th>SL</th>
                             <th>Category</th>
-                            <th>Description</th>
+                            <!-- <th>Description</th> -->
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -35,10 +35,10 @@ onMounted(()=>{
                             <td data-label="SL">{{ ++index }}
                             </td>
                             
-                            <td data-label="Category">{{ category.category }}</td>
-                            <td data-label="description"
+                            <td data-label="Category">{{ category.category_name }}</td>
+                            <!-- <td data-label="description"
                             data-bs-toggle="tooltip" data-bs-placement="top" 
-                            :title="category.description">{{ category.description.slice(0, 100) }}...</td>
+                            :title="category.description">{{ category.description.slice(0, 100) }}...</td> -->
 
                             <td data-label="Action">
                                 <div class="dropdown">

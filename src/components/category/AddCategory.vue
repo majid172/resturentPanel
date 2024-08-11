@@ -1,12 +1,14 @@
 <script setup>
 import { onMounted } from 'vue';
-import {useCategoryStore} from '@/stores/category';
+import { useCategoryStore } from '@/stores/category';
 
 const createCategory = useCategoryStore();
-// onMounted(()=>{
-//     createCategory.addCategory()
-// })
+
+onMounted(() => {
+    createCategory.fetchCategory();
+});
 </script>
+
 <template>
 <div class="row mb-none-30">
     <div class="col-lg-12 col-md-12 mb-30">
@@ -20,12 +22,12 @@ const createCategory = useCategoryStore();
                                     <label class="required"> Category Name</label>
                                 </div>
                                 <div class="col-md-9 col-xs-12">
-                                    <input class="form-control" type="text" name="category" required
-                                    v-model="createCategory.addCategoryForm.category">
+                                    <input class="form-control" type="text" name="category_name" required
+                                    v-model="createCategory.addCategoryForm.category_name">
                                 </div>
                             </div>
                            
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-md-3 col-xs-4 d-flex align-items-center">
                                     <label class="required">Description</label>
                                 </div>
@@ -33,14 +35,16 @@ const createCategory = useCategoryStore();
                                     <textarea class="form-control" col="15" row="5"  required name="description"
                                     v-model="createCategory.addCategoryForm.description"></textarea>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                        
                     </div>
                     
                     <div class="row">
+                    
                         <div class="col text-end">
-                            <button type="submit" class="btn btn--primary btn-global" @click="createCategory.addCategory">Save</button>
+                        <input type="button" class="btn btn-outline-danger my-3" value="Add Task" @click.prevent="createCategory.addCategory">
+                            <!-- <button type="submit" class="btn btn--primary btn-global">Save</button> -->
                         </div>
                     </div>
                 </form>
