@@ -13,25 +13,23 @@ export const useCategoryStore = defineStore('category', {
     actions: {
         async fetchCategory() {
             try {
-                const { data } = await axios.get('http://localhost:6000/api/get-category');
-                console.log(data);
+                const { data } = await axios.get('http://localhost:4000/api/get-category');
                 this.categories = data;
-                
-                
             } catch (error) {
-                console.error('Error fetching category:', error);
+                console.error('Error fetching category', error);
             }
         },
         async addCategory() {
-            try {
-                const { data } = await axios.post('http://localhost:6000/api/add-category', this.addCategoryForm);
+            const { data } = await axios.post('http://localhost:4000/api/add-category', this.addCategoryForm);
+                console.log('hello');
+                
                 this.categories.push(data);
+                
+                // Reset the form after successful submission
                 this.addCategoryForm.category_name = null;
-                // this.addCategoryForm.description = null;
-                console.log(data);
-            } catch (error) {
-                console.error('Error adding category:', error);
-            }
+               
+                
+                console.log('Category added successfully:', data);
         },
     },
 });

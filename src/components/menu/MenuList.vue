@@ -1,3 +1,12 @@
+<script setup>
+import { onMounted } from 'vue';
+import { useMenuStore } from '@/stores/menu';
+
+const menuStore = useMenuStore();
+onMounted(()=>{
+    menuStore.fetchMenus();
+})
+</script>
 <template>
 <div class="row">
     <div class="col-lg-12">
@@ -18,31 +27,42 @@
                             <th>Name</th>
                             <th>Category</th>
                             <th>Price</th>
-                        
+                            <th>Quantity</th>
+                            <th>Ingredients</th>
+                            <th>Ratings</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
                            
-                        <tr>
+                        <tr v-for="(menu,index) in menuStore.menus">
                             <td data-label="SL">
-                        
+                                {{ ++index }}
                             </td>
                             <td data-label="Name">
                                 <a href="" target="_blank">
                                     <div class=" d-block align-items-center ">
                                         <div class="rounded-circle mr-2 w-40px" data-original-title="">
-                                           
+                                           {{ menu.name }}
                                             <br>
                                             <span class="text-muted font-14"></span>
                                         </div> 
                                     </div>
                                 </a>
                             </td>
-                            <td data-label="Category"></td>
+                            <td data-label="Category">{{ menu.category_id.category_name }}</td>
                             
                             <td data-label="Price">
-                               
+                               {{ menu.price }}
+                            </td>
+                            <td data-label="Price">
+                               {{ menu.initial_quantity }}
+                            </td>
+                            <td data-label="Price">
+                               {{ menu.ingredients.toString() }}
+                            </td>
+                            <td data-label="Price">
+                               {{ menu.rating }}
                             </td>
 
                             <td data-label="Action">
