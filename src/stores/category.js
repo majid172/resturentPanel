@@ -15,6 +15,8 @@ export const useCategoryStore = defineStore('category', {
             try {
                 const { data } = await axios.get('http://localhost:4000/api/get-category');
                 this.categories = data;
+                console.log(data);
+                
             } catch (error) {
                 console.error('Error fetching category', error);
             }

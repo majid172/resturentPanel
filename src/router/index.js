@@ -8,7 +8,7 @@ import CategoryListView from '@/views/category/ListView.vue'
 import AddCategoryView from '@/views/category/AddCategroyView.vue';
 import MenuListView from '@/views/menu/ListView.vue';
 import AddMenuView from '@/views/menu/AddMenuView.vue';
-// import OrderListView from '@/views/order/listView.vue';
+import OrderListView from '@/views/order/listView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -61,7 +61,7 @@ const router = createRouter({
     {
       path:'/order-list',
       name: 'orderList',
-      // component: OrderListView
+      component: OrderListView
     }
     
   ]
