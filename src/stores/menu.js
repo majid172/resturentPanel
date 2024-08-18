@@ -9,7 +9,7 @@ export const useMenuStore = defineStore('menu',{
     getters:{},
     actions:{
         async fetchMenus(){
-            const {data} = await axios.get('http://localhost:4000/api/get-menus');
+            const {data} = await axios.get('http://localhost:5000/api/get-menus');
             console.log(data);
             this.menus = data;
             
