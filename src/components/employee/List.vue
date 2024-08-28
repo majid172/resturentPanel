@@ -5,7 +5,12 @@ import { useEmployeeStore } from '@/stores/employee';
 const employeeStore = useEmployeeStore();
 onMounted(()=>{
     employeeStore.employeeList();
-})
+});
+const handleDelete = async (id) => {
+  if (confirm('Are you sure you want to delete this employee?')) {
+    await employeeStore.deleteEmployee(id);
+  }
+};
 </script>
 <template>
     <div class="row">
@@ -42,7 +47,7 @@ onMounted(()=>{
                                 <td>
                                     <a href="javascript:void(0)" class="btn btn-sm btn-outline-info me-2"><i class="las la-pen"></i></a>
                                     
-                                    <a href="" class="btn btn-sm btn-outline-danger "><i class="las la-trash"></i></a>
+                                    <a href="javascript:void(0)" class="btn btn-sm btn-outline-danger "@click="handleDelete(item._id)"><i class="las la-trash"></i></a>
                                 </td>
                            </tr>
                         </tbody>
