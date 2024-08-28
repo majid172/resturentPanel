@@ -81,6 +81,15 @@ import '@/assets/js/dropdown.js'
                     </router-link>
                 </li>
     
+                <!-- employee -->
+                <li class="sidebar__menu-header">Employee Management</li>
+                <li class="sidebar-menu-item">
+                    <router-link :to="{name:'employeeList'}" class="nav-link"
+                       data-default-url="/employee-list">
+                        <i class="menu-icon las la-users text-danger"></i>
+                        <span class="menu-title">Employees List</span>
+                    </router-link>
+                </li>
                 
                 <li class="sidebar__menu-header">User Management</li>
                 <li class="sidebar-menu-item">
