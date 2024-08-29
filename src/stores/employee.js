@@ -12,6 +12,7 @@ export const useEmployeeStore = defineStore('employee',{
             const {data} = await axios.get('http://localhost:5000/api/get-employees');
             console.log(data);
             this.employees = data;
+            this.employees.reverse();
             
         },
         async deleteEmployee(id) {

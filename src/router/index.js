@@ -11,6 +11,7 @@ import AddMenuView from '@/views/menu/AddMenuView.vue';
 import OrderListView from '@/views/order/listView.vue';
 import AddOrderView from '@/views/order/AddOrderView.vue';
 import EmployeeListView from '@/views/employees/ListView.vue';
+import EmployeeEditView from '@/views/employees/EditView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,6 +75,11 @@ const router = createRouter({
       path:'/employee-list',
       name:'employeeList',
       component: EmployeeListView,
+    },
+    {
+      path:'/employee-edit',
+      name:'employeeEdit',
+      component: EmployeeEditView,
     }
     
   ]
