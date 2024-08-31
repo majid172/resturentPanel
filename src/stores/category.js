@@ -13,7 +13,7 @@ export const useCategoryStore = defineStore('category', {
     actions: {
         async fetchCategory() {
             try {
-                const { data } = await axios.get('http://localhost:4000/api/get-category');
+                const { data } = await axios.get('http://localhost:5000/api/get-category');
                 this.categories = data;
                 console.log(data);
                 
@@ -22,7 +22,7 @@ export const useCategoryStore = defineStore('category', {
             }
         },
         async addCategory() {
-            const { data } = await axios.post('http://localhost:4000/api/add-category', this.addCategoryForm);
+            const { data } = await axios.post('http://localhost:5000/api/add-category', this.addCategoryForm);
                 console.log('hello');
                 
                 this.categories.push(data);

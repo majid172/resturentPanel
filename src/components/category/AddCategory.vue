@@ -11,45 +11,29 @@ onMounted(() => {
 
 <template>
 <div class="row mb-none-30">
-    <div class="col-lg-12 col-md-12 mb-30">
-        <div class="card">
-            <div class="card-body px-4">
-                <form action="">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="row mb-2">
-                                <div class="col-md-3 col-xs-4 d-flex align-items-center">
-                                    <label class="required"> Category Name</label>
-                                </div>
-                                <div class="col-md-9 col-xs-12">
-                                    <input class="form-control" type="text" name="category_name" required
-                                    v-model="createCategory.addCategoryForm.category_name">
-                                </div>
-                            </div>
-                           
-                            <!-- <div class="row mb-2">
-                                <div class="col-md-3 col-xs-4 d-flex align-items-center">
-                                    <label class="required">Description</label>
-                                </div>
-                                <div class="col-md-9 col-xs-12">
-                                    <textarea class="form-control" col="15" row="5"  required name="description"
-                                    v-model="createCategory.addCategoryForm.description"></textarea>
-                                </div>
-                            </div> -->
-                        </div>
-                       
-                    </div>
-                    
-                    <div class="row">
-                    
-                        <div class="col text-end">
-                        <input type="button" class="btn btn-outline-danger my-3" value="Add Task" @click.prevent="createCategory.addCategory">
-                            <!-- <button type="submit" class="btn btn--primary btn-global">Save</button> -->
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+    <div class="col-lg-8 col-md-12 mb-30">
+        <div class="card ">
+  <div class="card-header">
+    <h4 class="text-success text-left">Add New Category</h4>
+    <div class="text-end">
+        <router-link class="btn btn-sm btn-outline-success" :to="{name:'categoryList'}">Category List</router-link>
+    </div>
+  </div>
+      <form action="">
+          <div class="card-body">
+            <div class="mb-3">
+    <label for="category_name" class="form-label">Category Name</label>
+    <input type="text" class="form-control" id="category_name" v-model="category_name">
+    
+  </div>
+        
+            
+          </div>
+          <div class="card-footer text-muted">
+            <button type="submit" class="btn btn-sm btn-outline-success w-25"> Add</button>
+          </div>
+      </form>
+</div>
     </div>
 </div>
 </template>
