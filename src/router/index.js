@@ -10,6 +10,8 @@ import MenuListView from '@/views/menu/ListView.vue';
 import AddMenuView from '@/views/menu/AddMenuView.vue';
 import OrderListView from '@/views/order/listView.vue';
 import AddOrderView from '@/views/order/AddOrderView.vue';
+
+import EmployeeAddView from '@/views/employees/AddView.vue';
 import EmployeeListView from '@/views/employees/ListView.vue';
 import EmployeeEditView from '@/views/employees/EditView.vue';
 
@@ -70,6 +72,11 @@ const router = createRouter({
       path:'/add-order',
       name:'addOrder',
       component:AddOrderView,
+    },
+    {
+      path:'/add-employee',
+      name:'addEmployee',
+      component:EmployeeAddView
     },
     {
       path:'/employee-list',

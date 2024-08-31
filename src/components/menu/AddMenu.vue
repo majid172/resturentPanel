@@ -11,8 +11,7 @@ onMounted(()=>{
     <div class="col-lg-12 col-md-12 mb-30">
         <div class="card">
             <div class="card-body px-4">
-                <form action="">
-            
+                <form>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="row mb-2">
@@ -20,7 +19,7 @@ onMounted(()=>{
                                     <label class="required"> Menu Name</label>
                                 </div>
                                 <div class="col-md-9 col-xs-12 ">
-                                    <input class="form-control" type="text" name="name" required
+                                    <input class="form-control" type="text" v-model="name" required
                                         value="" placeholder="Enter menu name">
                                 </div>
                             </div>
@@ -41,7 +40,7 @@ onMounted(()=>{
                                     <label class="required">Price</label>
                                 </div>
                                 <div class="col-md-9 col-xs-12">
-                                    <input class="form-control" type="text" name="price" placeholder="Enter menu price" required>
+                                    <input class="form-control" type="text" v-model="price" placeholder="Enter menu price" required>
                                 </div>
                             </div>
                         </div>

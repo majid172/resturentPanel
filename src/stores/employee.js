@@ -4,6 +4,11 @@ import axios from "axios";
 export const useEmployeeStore = defineStore('employee',{
     state:()=>({
         employees:[],
+        employeeForm:{
+          employee_name:null,
+          employee_phone_number:'',
+          employee_salary:""
+        }
         
     }),
     getters:{},
@@ -13,6 +18,15 @@ export const useEmployeeStore = defineStore('employee',{
             console.log(data);
             this.employees = data;
             this.employees.reverse();
+            
+        },
+        async createEmployee(){
+            // console.log(this.employeeForm);
+            const {data} = await axios.post('http://localhost:5000/api/add-employee',this.employeeForm);
+            //   console.log(data);
+              this.employees.push(data);
+            //   this.todos.reverse();
+            //   this.todoForm.title = null;
             
         },
         async deleteEmployee(id) {

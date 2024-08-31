@@ -5,7 +5,12 @@ import { useMenuStore } from '@/stores/menu';
 const menuStore = useMenuStore();
 onMounted(()=>{
     menuStore.fetchMenus();
-})
+});
+const handleDelete= async(id)=>{
+    if(confirm('Are you confirm to delete this menus ?')){
+        await menuStore.deleteMenu(id);
+    }
+}
 </script>
 <template>
 <div class="row">
@@ -65,19 +70,12 @@ onMounted(()=>{
                                {{ menu.rating }}
                             </td>
 
-                            <td data-label="Action">
+                            <td data-label="Action">    
+                                <router-link :to="{name:'employeeEdit'}" class="btn btn-outline-success me-2"><i class="las la-pen"></i></router-link>
+                                <!-- <a  class="btn btn-outline-success me-2" data-employee = "{{ item }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
+</a> -->
                                 
-                                <div class="dropdown">
-                                    <a class="btn btn--primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                      More Action
-                                    </a>
-                                  
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                      <li><a class="dropdown-item" href=""><i class="far fa-edit text--primary mr-1"></i>Details</a></li>
-                                      <li><a class="dropdown-item" href=""><i class="fa fa-sign-in-alt text--info mr-1"></i> Login As User</a></li>
-                                      <li><a class="dropdown-item" href=""><i class="las la-paper-plane text--warning mr-1"></i> Send Mail</a></li>
-                                    </ul>
-                                  </div>
+                                    <a href="javascript:void(0)" class="btn btn-sm btn-outline-danger "@click="handleDelete(menu._id)"><i class="las la-trash"></i></a>
                             </td>
 
                         </tr>

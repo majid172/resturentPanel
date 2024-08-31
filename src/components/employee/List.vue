@@ -19,7 +19,7 @@ const handleDelete = async (id) => {
         <div class="card mb-4 card-primary shadow">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text--primary">Employee List</h6>
-                <router-link to="/add-category" class="btn btn-sm btn-outline--primary">
+                <router-link to="/add-employee" class="btn btn-sm btn-outline--primary">
                     <i class="las la-plus"></i>Add New Employee
                 </router-link>
                
