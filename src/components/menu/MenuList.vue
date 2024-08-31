@@ -45,28 +45,24 @@ const handleDelete= async(id)=>{
                                 {{ ++index }}
                             </td>
                             <td data-label="Name">
-                                <a href="" target="_blank">
-                                    <div class=" d-block align-items-center ">
-                                        <div class="rounded-circle mr-2 w-40px" data-original-title="">
-                                           {{ menu.name }}
-                                            <br>
-                                            <span class="text-muted font-14"></span>
-                                        </div> 
-                                    </div>
-                                </a>
+                                {{ menu.name }}
                             </td>
-                            <td data-label="Category">{{ menu.category_id.category_name }}</td>
+                            <td data-label="Category">
+                                <router-link :to="{name:'categoryList'}">
+                                 {{ menu.category_id.category_name }}
+                                </router-link>
+                           </td>
                             
                             <td data-label="Price">
                                {{ menu.price }}
                             </td>
-                            <td data-label="Price">
+                            <td data-label="Quantity">
                                {{ menu.initial_quantity }}
                             </td>
                             <td data-label="Price">
                                {{ menu.ingredients.toString() }}
                             </td>
-                            <td data-label="Price">
+                            <td data-label="Rating">
                                {{ menu.rating }}
                             </td>
 
