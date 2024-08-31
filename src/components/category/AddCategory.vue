@@ -4,9 +4,9 @@ import { useCategoryStore } from '@/stores/category';
 
 const createCategory = useCategoryStore();
 
-onMounted(() => {
-    createCategory.fetchCategory();
-});
+// onMounted(() => {
+    // createCategory.fetchCategory();
+// });
 </script>
 
 <template>
@@ -19,18 +19,15 @@ onMounted(() => {
         <router-link class="btn btn-sm btn-outline-success" :to="{name:'categoryList'}">Category List</router-link>
     </div>
   </div>
-      <form action="">
+      <form>
           <div class="card-body">
             <div class="mb-3">
-    <label for="category_name" class="form-label">Category Name</label>
-    <input type="text" class="form-control" id="category_name" v-model="category_name">
-    
-  </div>
-        
-            
+                <label for="category_name" class="form-label">Category Name</label>
+                <input type="text" class="form-control" id="category_name" v-model="createCategory.addCategoryForm.category_name" required autocomplete="off">
+            </div>
           </div>
           <div class="card-footer text-muted">
-            <button type="submit" class="btn btn-sm btn-outline-success w-25"> Add</button>
+            <button type="submit" class="btn btn-sm btn-outline-success w-25" @click.prevent="createCategory.addCategory"> Add</button>
           </div>
       </form>
 </div>

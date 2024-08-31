@@ -6,7 +6,7 @@ export const useCategoryStore = defineStore('category', {
         categories: [],
         addCategoryForm: {
             category_name: null,
-            description: null,
+            // description: null,
         },
     }),
     getters: {},
@@ -23,11 +23,8 @@ export const useCategoryStore = defineStore('category', {
         },
         async addCategory() {
             const { data } = await axios.post('http://localhost:5000/api/add-category', this.addCategoryForm);
-                console.log('hello');
-                this.categories.push(data);
-                // Reset the form after successful submission
-                this.addCategoryForm.category_name = null;
-                console.log('Category added successfully:', data);
+            this.categories.push(data);
+            this.resetForm();
         },
         
         async deleteCategory(id){
@@ -38,6 +35,12 @@ export const useCategoryStore = defineStore('category', {
                 console.error("Failed to delete employee:", error);
             }
             
+        },
+        resetForm(){
+            this.addCategoryForm={
+                category_name: null,
+            }
         }
+        
     },
 });
