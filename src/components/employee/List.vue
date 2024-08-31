@@ -50,7 +50,7 @@ const handleDelete = async (id) => {
                                 <!-- <a  class="btn btn-outline-success me-2" data-employee = "{{ item }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
 </a> -->
                                 
-                                    <a href="javascript:void(0)" class="btn btn-sm btn-outline-danger "@click="handleDelete(item._id)"><i class="las la-trash"></i></a>
+                                    <a href="javascript:void(0)" class="btn btn-sm btn-outline-danger " @click="handleDelete(item._id)"><i class="las la-trash"></i></a>
                                 </td>
                            </tr>
                         </tbody>

@@ -3,9 +3,16 @@ import { onMounted } from 'vue';
 import { useCategoryStore } from '@/stores/category';
 
 const categoryStore = useCategoryStore();
+const handleDelete = async (id) => {
+  if (confirm('Are you sure you want to delete this category?')) {
+    await categoryStore.deleteCategory(id);
+  }
+};
+
 onMounted(()=>{
     categoryStore.fetchCategory()
 });
+
 </script>
 <template>
     <div class="row">
@@ -41,17 +48,8 @@ onMounted(()=>{
                             :title="category.description">{{ category.description.slice(0, 100) }}...</td> -->
 
                             <td data-label="Action">
-                                <div class="dropdown">
-                                    <a class="btn btn--primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                      More Action
-                                    </a>
-                                  
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                      <li><a class="dropdown-item" href=""><i class="far fa-edit text--primary mr-1"></i>Details</a></li>
-                                      <li><a class="dropdown-item" href=""><i class="fa fa-sign-in-alt text--info mr-1"></i> Login As User</a></li>
-                                      <li><a class="dropdown-item" href=""><i class="las la-paper-plane text--warning mr-1"></i> Send Mail</a></li>
-                                    </ul>
-                                  </div>
+                                <router-link :to="{name:'employeeEdit'}" class="btn btn-outline-success me-2"><i class="las la-pen"></i></router-link>
+                                <button class="btn btn-outline-danger me-2"  @click="handleDelete(category._id)"><i class="las la-trash"></i></button>
                             </td>
 
                         </tr>
