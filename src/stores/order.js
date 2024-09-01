@@ -5,13 +5,19 @@ export const useOrderStore = defineStore('order', {
     state: () => ({
         orders: [],
         orderForm: {
-        
             menuItems: [
+                { menu: "", quantity: 1 }
             ],
-            totalPrice: "",
+            // menuItems: [
+            //     { menu: [{
+            //         id:''
+            //     }], quantity: 1 }
+            // ],
             customerName: "",
             orderDate: "",
-            status: ""
+            status: "",
+            quantity: "",
+            totalPrice: "",
         }
     }),
     getters: {},
@@ -24,11 +30,13 @@ export const useOrderStore = defineStore('order', {
         
         async createOrder() {
             try {
-                const { data } = await axios.post('http://localhost:5000/api/add-order', this.orderForm);
-                console.log(data);
-                this.orders.push(data);
-                this.orders.reverse();
-                this.resetOrderForm();
+                console.log(this.orderForm.menuItems.menu.id);
+                
+                // const { data } = await axios.post('http://localhost:5000/api/add-order', this.orderForm);
+                // console.log(data);
+                // this.orders.push(data);
+                // this.orders.reverse();
+                // this.resetOrderForm();
             } catch (error) {
                 console.error("Error creating order:", error);
             }

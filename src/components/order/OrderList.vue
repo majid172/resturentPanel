@@ -10,7 +10,7 @@ onMounted(()=>{
 <div class="row">
 <div class="col-lg-12">
 <div class="card">
-              <div class="card-header">
+              <div class="card-header text-success">
                  Order List
               </div>
                   <div class="card-body ">
@@ -52,7 +52,7 @@ onMounted(()=>{
       <td>
       <div class="dropdown">
       <a
-        class="btn btn-outline-success dropdown-toggle"
+        class=" dropdown-toggle"
         href="javascript:void(0)"
         role="button"
         data-bs-toggle="dropdown"
@@ -61,8 +61,10 @@ onMounted(()=>{
         <i class="las la-ellipsis-v"></i>
       </a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Processing</a></li>
-        <li><a class="dropdown-item" href="#">Complete</a></li>
+        
+        <li><a class="dropdown-item text-info" href="javascript"><i class="las la-info-circle"></i> Details</a></li>
+        <li><a class="dropdown-item text-success" href="javascript"><i class="las la-edit"></i> Edit</a></li>
+        <li><a class="dropdown-item text-danger" href="javascript"><i class="las la-trash"></i> Delete</a></li>
       </ul>
     </div>
   </td>

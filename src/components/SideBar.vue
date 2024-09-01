@@ -51,17 +51,17 @@ import '@/assets/js/dropdown.js'
                 
                 <li class="sidebar__menu-header">Order Details</li>
                 <li class="sidebar-menu-item">
-                    <router-link to="/add-order" class="nav-link"
-                       data-default-url="/">
-                        <i class="menu-icon las la-list text-success"></i>
-                        <span class="menu-title">Add Order</span>
+                    <router-link to="/order-list" class="nav-link"
+                       data-default-url="/order-list">
+                        <i class="menu-icon las la-hamburger text-success"></i>
+                        <span class="menu-title">Order List</span>
                     </router-link>
                 </li>
                 <li class="sidebar-menu-item">
-                    <router-link to="/order-list" class="nav-link"
-                       data-default-url="/order-list">
-                        <i class="menu-icon las la-list text-success"></i>
-                        <span class="menu-title">Order List</span>
+                    <router-link to="/add-order" class="nav-link"
+                       data-default-url="/">
+                        <i class="menu-icon las la-plus-circle text-success"></i>
+                        <span class="menu-title">Add Order</span>
                     </router-link>
                 </li>
                 
