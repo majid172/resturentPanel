@@ -29,7 +29,7 @@ onMounted(()=>{
                             <label class="required">Menus</label>
                         </div>
                         <div class="col-md-9 col-xs-12">
-                            <select v-model="orderStore.orderForm.menuItems.menu" class="form-control" required>
+                            <select v-model="orderStore.orderForm.menuItems[0].menu" class="form-control" required>
                                 <option v-for="item in menuStore.menus" :key="item._id" :value="item._id">{{item.name}} - ({{ item.initial_quantity }})</option>
                             
                             </select>
@@ -49,7 +49,7 @@ onMounted(()=>{
                                     <label class="required"> Quantity</label>
                                 </div>
                                 <div class="col-md-9 col-xs-12 ">
-                                    <input class="form-control" type="text" v-model="orderStore.orderForm.quantity" required
+                                    <input class="form-control" type="text" v-model="orderStore.orderForm.menuItems[0].quantity" required
                                          placeholder="Enter menu quantity">
                                 </div>
                             </div>

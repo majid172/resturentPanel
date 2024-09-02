@@ -10,12 +10,15 @@ onMounted(()=>{
 <div class="row">
 <div class="col-lg-12">
 <div class="card">
-              <div class="card-header text-success">
-                 Order List
-              </div>
-                  <div class="card-body ">
-                      <div class="table-responsive">
-                      <table class="table">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text--primary">Order List</h6>
+        <router-link :to="{name:'addOrder'}" class="btn btn-sm btn-outline--primary">
+            <i class="las la-plus me-1"></i>Add Order
+        </router-link>
+    </div>
+    <div class="card-body ">
+        <div class="table-responsive">
+        <table class="table">
   <thead>
     <tr>
       
@@ -64,7 +67,7 @@ onMounted(()=>{
         
         <li><a class="dropdown-item text-info" href="javascript"><i class="las la-info-circle"></i> Details</a></li>
         <li><a class="dropdown-item text-success" href="javascript"><i class="las la-edit"></i> Edit</a></li>
-        <li><a class="dropdown-item text-danger" href="javascript"><i class="las la-trash"></i> Delete</a></li>
+        <li><a class="dropdown-item text-danger" href="javascript" @click.prevent="orderStore.deleteOrder(order._id)"><i class="las la-trash"></i> Delete</a></li>
       </ul>
     </div>
   </td>
