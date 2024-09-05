@@ -31,6 +31,18 @@ export const useMenuStore = defineStore('menu',{
             this.menus.reverse();
         },
         
+        async editMenu(id)
+        {
+            const {data} = await axios.get(`http://localhost:5000/api/get-menu/${id}`);
+            this.menuForm.name = data.name;
+            this.menuForm.price = data.price;
+            this.menuForm.rating = data.rating;
+            this.menuForm.category_id = data.category_id.category_id;
+            this.menuForm.initial_quantity = data.initial_quantity;
+            console.log(data);
+            
+        },
+        
         async deleteMenu(id){
             await axios.delete(`http://localhost:5000/api/delete-menus/${id}`);
             await this.fetchMenus();

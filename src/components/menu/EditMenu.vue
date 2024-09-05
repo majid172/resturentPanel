@@ -2,11 +2,16 @@
 import { onMounted } from 'vue';
 import { useCategoryStore } from '@/stores/category';
 import { useMenuStore } from '@/stores/menu';
+import { useRoute } from 'vue-router';
 
+const route = useRoute();
 const categoryStore = useCategoryStore();
 const menuStore = useMenuStore();
+const menu_id = route.params.id;
 onMounted(()=>{
     categoryStore.fetchCategory();
+    menuStore.editMenu(menu_id);
+    // menuStore.menuForm.category_id = menuStore.selectedMenu.category_id;
 })
 
 </script>
@@ -87,7 +92,7 @@ onMounted(()=>{
                     
                     <div class="row">
                         <div class="col text-end">
-                            <button type="submit" class="btn btn--primary btn-global" @click.prevent="menuStore.createMenu">Save</button>
+                            <button type="submit" class="btn btn--primary btn-global" @click.prevent="menuStore.createMenu">Update</button>
                         </div>
                     </div>
                 </form>
