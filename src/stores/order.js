@@ -30,11 +30,11 @@ export const useOrderStore = defineStore('order', {
         async createOrder() {
             try {
                 // console.log(this.orderForm.menuItems);
-                
+            
                 const { data } = await axios.post('http://localhost:5000/api/add-order', this.orderForm);
                 // console.log(data);
                 this.orders.push(data);
-                // this.orders.reverse();
+                this.orders.reverse();
                 this.resetOrderForm();
             } catch (error) {
                 console.error("Error creating order:", error);
@@ -43,10 +43,8 @@ export const useOrderStore = defineStore('order', {
         async deleteOrder(id){
             
             try {
-                console.log(id);
-                
-                    await axios.delete(`http://localhost:5000/api/delete-order/${id}`);
-                    await this.orderList();
+                await axios.delete(`http://localhost:5000/api/delete-order/${id}`);
+                await this.orderList();
                 } catch (error) {
                     console.error("Failed to delete employee:", error);
                 }

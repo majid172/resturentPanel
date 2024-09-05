@@ -40,7 +40,7 @@ const handleDelete= async(id)=>{
                         </thead>
                         <tbody>
                            
-                        <tr v-for="(menu,index) in menuStore.menus">
+                        <tr v-for="(menu,index) in menuStore.menus" >
                             <td data-label="SL">
                                 {{ ++index }}
                             </td>
@@ -67,10 +67,9 @@ const handleDelete= async(id)=>{
                             </td>
 
                             <td data-label="Action">    
-                                <router-link :to="{name:'employeeEdit'}" class="btn btn-outline-success me-2"><i class="las la-pen"></i></router-link>
+                                <router-link :to="{name:'editMenu', params: { id: menu._id }}" class="btn btn-outline-success me-2"><i class="las la-pen"></i></router-link>
                                 <!-- <a  class="btn btn-outline-success me-2" data-employee = "{{ item }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
 </a> -->
-                                
                                     <a href="javascript:void(0)" class="btn btn-sm btn-outline-danger "@click="handleDelete(menu._id)"><i class="las la-trash"></i></a>
                             </td>
 

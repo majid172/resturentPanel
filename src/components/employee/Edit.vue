@@ -1,15 +1,22 @@
 <script setup>
+import { useEmployeeStore } from '@/stores/employee';
+import { onMounted } from 'vue';
+
+const employeeStore = useEmployeeStore();
+onMounted(()=>{
+    employeeStore.employeeList();
+});
 </script>
 <template>
     <div class="row mb-none-30">
     <div class="col-lg-12 col-md-12 mb-30">
-        <div class="card">
+        <div class="card"> 
             <div class="card-body px-4">
                 <form action="">
                     <form action="">
             <div class="mb-3">
                 <label for="name" class="form-label">Employee Name</label>
-                <input type="text" v-model="employee_name" class="form-control" id="name" aria-describedby="name" placeholder="Enter employee name">
+                <input type="text" v-model="employeeStore.employees._id" class="form-control" id="name" aria-describedby="name" placeholder="Enter employee name">
                 
               </div>
             <div class="row">

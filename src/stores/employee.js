@@ -29,6 +29,9 @@ export const useEmployeeStore = defineStore('employee',{
             //   this.todoForm.title = null;
             
         },
+        async editEmployee(){
+            const {data} = await axios.get()
+        },
         async deleteEmployee(id) {
             try {
                 await axios.delete(`http://localhost:5000/api/delete-employee/${id}`);

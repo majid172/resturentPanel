@@ -38,7 +38,7 @@ onMounted(()=>{
                         </thead>
                         <tbody>
                            
-                        <tr v-for="(category,index) in categoryStore.categories">
+                        <tr v-for="(category,index) in categoryStore.categories" :key="category._id">
                             <td data-label="SL">{{ ++index }}
                             </td>
                             
@@ -48,7 +48,7 @@ onMounted(()=>{
                             :title="category.description">{{ category.description.slice(0, 100) }}...</td> -->
 
                             <td data-label="Action">
-                                <router-link :to="{name:'employeeEdit'}" class="btn btn-outline-success me-2"><i class="las la-pen"></i></router-link>
+                                <router-link :to="{name:'editCategory', params: { id: category._id }}" class="btn btn-outline-success me-2"><i class="las la-pen"></i></router-link>
                                 <button class="btn btn-outline-danger me-2"  @click="handleDelete(category._id)"><i class="las la-trash"></i></button>
                             </td>
 

@@ -27,6 +27,23 @@ export const useCategoryStore = defineStore('category', {
             this.resetForm();
         },
         
+        async editCategory(id)
+        {
+            const {data} = await axios.get(`http://localhost:5000/api/get-category/${id}`);
+            this.addCategoryForm.category_name = data.category_name;
+            
+        },
+        async updateCategory(id)
+        {
+            const { data } = await axios.put(`http://localhost:5000/api/update-category/${id}`, this.addCategoryForm);
+            const index = this.categories.findIndex(category => category._id === id);
+            // this.categories[index] = data;
+            if (index !== -1) {
+                this.categories[index] = data;
+            }
+            // this.resetForm();
+        },
+        
         async deleteCategory(id){
             try {
                 await axios.delete(`http://localhost:5000/api/delete-category/${id}`);

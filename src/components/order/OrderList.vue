@@ -2,6 +2,11 @@
 import { onMounted } from 'vue';
 import { useOrderStore } from '@/stores/order';
 const orderStore = useOrderStore();
+const handleDelete = async (id) => {
+  if (confirm('Are you sure you want to delete this order?')) {
+    await orderStore.deleteOrder(id);
+  }
+};
 onMounted(()=>{
     orderStore.orderList();
 })
@@ -67,7 +72,7 @@ onMounted(()=>{
         
         <li><a class="dropdown-item text-info" href="javascript"><i class="las la-info-circle"></i> Details</a></li>
         <li><a class="dropdown-item text-success" href="javascript"><i class="las la-edit"></i> Edit</a></li>
-        <li><a class="dropdown-item text-danger" href="javascript" @click.prevent="orderStore.deleteOrder(order._id)"><i class="las la-trash"></i> Delete</a></li>
+        <li><a class="dropdown-item text-danger" href="javascript" @click.prevent="handleDelete(order._id)"><i class="las la-trash"></i> Delete</a></li>
       </ul>
     </div>
   </td>
